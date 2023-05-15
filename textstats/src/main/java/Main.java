@@ -25,7 +25,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        
+        int count = 1;
         String URL = readStringFromURL("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm");
         String lower = URL.toLowerCase();
         String noHTML = removeHTML(lower);
@@ -35,8 +35,9 @@ public class Main {
         Map<String, Integer> finalMap = sorted(wordList);
         
        for (Map.Entry<String, Integer> en : finalMap.entrySet()) {
-            System.out.println("\"" + en.getKey().trim() + "\""+ " occured " +  en.getValue() + " times.");
-        }
+            System.out.println(count + ":" + "\"" + en.getKey().trim() + "\""+ " occured " +  en.getValue() + " times.");
+        count++;
+       }
 
     }
 // read directly from url
