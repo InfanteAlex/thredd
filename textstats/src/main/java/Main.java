@@ -97,12 +97,12 @@ public class Main {
         // Sort  list
         Collections.sort(hash, (Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2)
                 -> (o2.getValue()).compareTo(o1.getValue()));
-        //new list with only top 20 resluts
+        //new list with the resluts
         HashMap<String, Integer> temp = new LinkedHashMap<String, Integer>();
         for (Map.Entry<String, Integer> aa : hash) {
-            if (temp.size() < 20) {
+           
                 temp.put(aa.getKey(), aa.getValue());
-            }
+            
         }
         return temp;
 
